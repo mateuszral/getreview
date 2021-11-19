@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getreview - menu</title>
+    <link rel="stylesheet" href="dist/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="src/js/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/c93bd844e9.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="./src/images/logo.png" alt="logo" />
+        <img src="./src/images/getreview.svg" alt="getreview" />
+      </div>
+      <nav class="nav">
+        <li class="nav__item nav__item--active"><span>Panel</span></li>
+        <li class="nav__item"><span>Konfiguracja</span></li>
+        <li class="nav__item" data-badge="2">
+          <span>Moderacja opinii</span>
+          <ul class="nav__item__sublist hidden">
+            <li data-badge="2">Ogólna</li>
+            <li>Produktowa</li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <span>Płatności</span>
+          <ul class="nav__item__sublist hidden">
+            <li>Nadchodzące</li>
+            <li data-badge="3">Ostatnie</li>
+          </ul>
+        </li>
+        <li class="nav__item"><span>Q&A</span></li>
+        <li class="nav__item" data-badge="10"><span>SEO</span></li>
+        <li class="nav__item"><span>Minimoduł</span></li>
+        <li class="nav__item"><span>Newsletter</span></li>
+        <li class="nav__item" data-badge="5"><span>Narzędzia</span></li>
+        <li class="nav__item"><span>FAQ</span></li>
+        <li class="nav__item"><span>Samouczek</span></li>
+        <li class="nav__item"><span>Roadmap</span></li>
+      </nav>
+      <footer class="footer">
+        <span>&copy; Getreview</span>
+        <button class="fold">
+          <div class="fold__tooltip">Zwiń menu</div>
+          <img src="./src/icons/fold.png" alt="Fold" />
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
