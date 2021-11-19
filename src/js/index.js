@@ -24,7 +24,7 @@ let isFolded = false;
 
 navItems.forEach((item, index) => {
   const itemIcon = document.createElement('div');
-  itemIcon.style.backgroundImage = `url(/src/icons/${menuItems[index]}.png)`;
+  itemIcon.style.backgroundImage = `url(src/icons/${menuItems[index]}.png)`;
   itemIcon.className = 'nav__item__icon';
   item.prepend(itemIcon);
 

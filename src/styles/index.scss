@@ -61,7 +61,6 @@ body {
         }
 
         &__sublist {
-          // display: none;
           padding: 10px 30px 0;
 
           li {
@@ -87,10 +86,6 @@ body {
         .hidden {
           display: none;
         }
-
-        // &:hover .nav__item__sublist {
-        //   display: block;
-        // }
 
         &__folded {
           width: 50%;
