@@ -1,3 +1,9 @@
+$primary-color: #0064ef;
+$white: #ffffff;
+$grey300: #535861;
+$grey200: #909ba9;
+$grey100: #ebeaf0;
+
 *,
 *::before,
 *::after {
@@ -20,7 +26,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ebeaf0;
+    border: 1px solid $grey100;
     padding: 20px 15px;
 
     &__folded {
@@ -42,7 +48,7 @@ body {
     .nav {
       margin-top: 20px;
       list-style: none;
-      color: #535861;
+      color: $grey300;
       min-width: 50px;
 
       &__item {
@@ -57,28 +63,33 @@ body {
 
         &__drop__icon {
           margin-left: 10px;
-          color: #909ba9;
+          color: $grey200;
         }
 
         &__sublist {
           padding: 10px 30px 0;
+          list-style: disc;
 
           li {
             font-weight: 400;
             padding: 5px;
 
-            &[data-badge]::after {
-              content: attr(data-badge);
-              width: 20px;
-              height: 20px;
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              background-color: #0064ef;
-              color: #fff;
-              font-size: 12px;
-              margin-left: 5px;
-              border-radius: 50%;
+            &[data-badge] {
+              font-weight: 700;
+
+              &::after {
+                content: attr(data-badge);
+                width: 20px;
+                height: 20px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                color: $white;
+                font-size: 12px;
+                margin-left: 5px;
+                border-radius: 50%;
+              }
             }
           }
         }
@@ -103,8 +114,8 @@ body {
             top: 50%;
             right: -35px;
             transform: translateY(-50%);
-            background-color: #fff;
-            color: #535861;
+            background-color: $white;
+            color: $grey300;
             padding: 2px 5px;
             border-radius: 3px;
             border: 1px solid #c7ccd5;
@@ -129,7 +140,7 @@ body {
 
         &--active {
           background-color: #edf4ff;
-          color: #0064ef;
+          color: $primary-color;
           border-radius: 10px;
 
           .nav__item__icon {
@@ -138,7 +149,7 @@ body {
           }
 
           .nav__item__drop__icon {
-            color: #0064ef;
+            color: $primary-color;
           }
         }
       }
@@ -148,7 +159,7 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      color: #909ba9;
+      color: $grey200;
       font-size: 14px;
       font-weight: 400;
       padding: 10px 0;
@@ -161,8 +172,8 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        background-color: #fff;
-        border: 1px solid #ebeaf0;
+        background-color: $white;
+        border: 1px solid $grey100;
         border-radius: 10px;
         cursor: pointer;
 
@@ -190,8 +201,8 @@ body {
           top: -50px;
           left: 50%;
           transform: translateX(-50%);
-          background-color: #0064ef;
-          color: #fff;
+          background-color: $primary-color;
+          color: $white;
           font-size: 12px;
           font-weight: 700;
           padding: 7px 12px;
@@ -209,7 +220,7 @@ body {
             bottom: -4px;
             left: 50%;
             transform: translateX(-50%) rotate(45deg);
-            background-color: #0064ef;
+            background-color: $primary-color;
             box-shadow: 4px 4px 4px rgba(00, 00, 00, 0.5);
             z-index: -1;
           }
@@ -222,12 +233,12 @@ body {
       }
 
       &__folded {
-        span {
+        & > span {
           display: none;
         }
 
         .fold {
-          background-color: #0064ef;
+          background-color: $primary-color;
 
           img {
             filter: brightness(0) invert(1);

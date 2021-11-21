@@ -34,15 +34,15 @@ navItems.forEach((item, index) => {
     item.classList.add('nav__item--active');
 
     if (!isFolded) {
-      if (item.children.length > 2) {
-        item.querySelector('.nav__item__sublist').classList.remove('hidden');
-      }
+      item.querySelector('.nav__item__sublist').classList.remove('hidden');
     }
   });
 });
 
 foldButton.addEventListener('click', () => {
   isFolded = !isFolded;
+
+  sublistItems.forEach((el) => el.classList.add('hidden'));
 
   if (isFolded) {
     wrapper.classList.add('wrapper__folded');
@@ -67,8 +67,8 @@ foldButton.addEventListener('click', () => {
   }
 });
 
-document.querySelectorAll(':is(.nav__item) ul').forEach((el) => {
+sublistItems.forEach((el) => {
   const dropIcon = document.createElement('i');
   dropIcon.className = 'fas fa-sort-down nav__item__drop__icon';
-  el.previousElementSibling.appendChild(dropIcon);
+  el.previousElementSibling.append(dropIcon);
 });
