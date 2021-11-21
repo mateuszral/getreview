@@ -33,7 +33,7 @@ navItems.forEach((item, index) => {
     sublistItems.forEach((el) => el.classList.add('hidden'));
     item.classList.add('nav__item--active');
 
-    if (!isFolded) {
+    if (!isFolded && item.querySelector('.nav__item__sublist')) {
       item.querySelector('.nav__item__sublist').classList.remove('hidden');
     }
   });
